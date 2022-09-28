@@ -7,7 +7,6 @@ import '../styles/main.scss';
 
 const promise1 = new Promise((resolve, reject) => {
     setTimeout(() => {
-        document.querySelector('.modal').style.display = 'block';
         let error = false;
         if (!error)
             resolve();
@@ -15,6 +14,8 @@ const promise1 = new Promise((resolve, reject) => {
             reject('error in Rami promise')
     }, 60000)
 })
+
+promise1.then(() => document.querySelector('.modal').style.display = 'block');
 
 document.querySelector('.close').addEventListener('click', (e) => document.querySelector('.modal').style.display = 'none');
 
