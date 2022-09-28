@@ -5,3 +5,17 @@ import '../styles/main.scss';
 
 // \/ All of your javascript should go here \/
 
+const promise1 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        document.querySelector('.modal').style.display = 'block';
+        let error = false;
+        if (!error)
+            resolve();
+        else
+            reject('error in Rabi promise')
+    }, 6000)
+})
+
+document.querySelector('.close').addEventListener('click', (e) => document.querySelector('.modal').style.display = 'none');
+
+console.log(promise1);
