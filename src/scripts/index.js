@@ -12,8 +12,8 @@ const promise1 = new Promise((resolve, reject) => {
         if (!error)
             resolve();
         else
-            reject('error in Rabi promise')
-    }, 6000)
+            reject('error in Rami promise')
+    }, 60000)
 })
 
 document.querySelector('.close').addEventListener('click', (e) => document.querySelector('.modal').style.display = 'none');
